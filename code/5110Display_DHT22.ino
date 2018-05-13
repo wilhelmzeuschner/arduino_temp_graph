@@ -56,7 +56,7 @@ unsigned long last_millis = 0;
 unsigned long last_millis_2 = 0;
 volatile unsigned long last_millis_isr = 0;
 
-Adafruit_PCD8544 d = Adafruit_PCD8544(display_dc, display_cs, display_reset);
+Adafruit_PCD8544 d = Adafruit_PCD8544(display_dc, display_cs, display_reset); //Reset can be pulled high permanently by a resistor
 
 DHT dht(dht_pin, DHTTYPE);
 
