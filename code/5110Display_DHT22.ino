@@ -71,7 +71,7 @@ void setup() {
 	digitalWrite(backlight_pin, 1);
 
 	Serial.begin(115200);
-	Serial.println("Gebaut von Wilhelm Zeuschner. Projekt begonnen am 31.03.2018. Uploaded: 11.05.2018");
+	Serial.println("Development started: 31.03.2018.");
 	dht.begin();
   Serial.println(dht.readTemperature());
 	d.begin();
