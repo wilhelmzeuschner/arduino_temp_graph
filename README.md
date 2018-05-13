@@ -1,4 +1,4 @@
-#Temperature and Humidity Monitor w/ Graphing - 5110 Display - DHT22
+# Temperature and Humidity Monitor w/ Graphing - 5110 Display - DHT22
 
 Libraries:
 
