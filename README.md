@@ -10,5 +10,6 @@ https://github.com/adafruit/Adafruit-GFX-Library
 
 
 Both .ino files are required and must be in the same folder.
+(Some UI-text is still in German, but this is very easy to change ;))
 
 3D-Model: https://www.thingiverse.com/thing:2908971
