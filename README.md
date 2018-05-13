@@ -13,3 +13,5 @@ Both .ino files are required and must be in the same folder.
 (Some UI-text is still in German, but this is very easy to change ;))
 
 3D-Model: https://www.thingiverse.com/thing:2908971
+
+![Device](https://github.com/wilhelmzeuschner/arduino_temp_graph/blob/master/images/IMG_20180513_132500.jpg)
