@@ -1,5 +1,8 @@
 //5110 Screen 84x48 Pixels - DHT-Sensor
 //Wilhelm Zeuschner, Started on 31.03.2018
+//MAKE SURE THAT DHT.ino is in the same directory as this file! It should then open up in a new tab in de Arduino IDE.
+//SUGGESTION: It would be a good idea to fill the array that contains the information about the average temperatures of the last 60h with readings as soon as the program is launched.
+//If you do that, the scaling will propably work much better for the first 60h. Do this in the void setup()
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_PCD8544.h>
@@ -10,8 +13,6 @@
 #define DHTTYPE DHT22
 
 #include <EEPROM.h>
-
-
 
 //Pins
 const byte dht_pin = 6;
