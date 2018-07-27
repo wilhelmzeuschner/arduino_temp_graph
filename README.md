@@ -9,7 +9,7 @@ _Always ON_, _Always OFF_ or _Adaptive_. A LDR is used for the _Adaptive_-mode.
 
 Certain information, like the selected backlight-mode, will be saved in the internal EEPROM.
 
-# Both .ino files are required and must be in the same folder. (Some UI-text is still in German, but this is very easy to change ;))
+**Both .ino files are required and must be in the same folder. (Some UI-text is still in German, but this is very easy to change ;))**
 
 Required libaries:
 https://github.com/adafruit/Adafruit-GFX-Library,
