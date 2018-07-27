@@ -1,8 +1,5 @@
 //5110 Screen 84x48 Pixels - DHT-Sensor
 //Wilhelm Zeuschner, Started on 31.03.2018
-//MAKE SURE THAT DHT.ino is in the same directory as this file! It should then open up in a new tab in de Arduino IDE.
-//SUGGESTION: It would be a good idea to fill the array that contains the information about the average temperatures of the last 60h with readings as soon as the program is launched.
-//If you do that, the scaling will propably work much better for the first 60h. Do this in the void setup()
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_PCD8544.h>
@@ -13,6 +10,8 @@
 #define DHTTYPE DHT22
 
 #include <EEPROM.h>
+
+
 
 //Pins
 const byte dht_pin = 6;
@@ -27,7 +26,7 @@ const byte display_dc = 5;
 //Otherwise Hardware SPI-Pins!
 
 //Variables
-int eeprom_bl = 0;
+int eeprom_bl = 0;    //EEPROM Address
 int eeprom_ui = 2;
 
 //extern float temp;
@@ -57,7 +56,7 @@ unsigned long last_millis = 0;
 unsigned long last_millis_2 = 0;
 volatile unsigned long last_millis_isr = 0;
 
-Adafruit_PCD8544 d = Adafruit_PCD8544(display_dc, display_cs, display_reset); //Reset can be pulled high permanently by a resistor
+Adafruit_PCD8544 d = Adafruit_PCD8544(display_dc, display_cs, display_reset);
 
 DHT dht(dht_pin, DHTTYPE);
 
@@ -72,7 +71,7 @@ void setup() {
 	digitalWrite(backlight_pin, 1);
 
 	Serial.begin(115200);
-	Serial.println("Development started: 31.03.2018.");
+	Serial.println("Gebaut von Wilhelm Zeuschner. Projekt begonnen am 31.03.2018. Uploaded: 27.07.2018");
 	dht.begin();
   Serial.println(dht.readTemperature());
 	d.begin();
@@ -99,7 +98,12 @@ void setup() {
 		digitalWrite(backlight_pin, 0);
 	}
 
-	temp_hours[59] = dht.readTemperature() * 10;
+
+  //Fill Hour Array with readings to get better axis scaling
+  for (int i = 0; i < 60; i ++) {
+    temp_hours[i] = dht.readTemperature() * 10;
+    delay(50);
+  }  
 }
 
 void loop() {
