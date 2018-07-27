@@ -15,5 +15,9 @@ https://github.com/adafruit/Adafruit-GFX-Library,
 https://github.com/adafruit/Adafruit-PCD8544-Nokia-5110-LCD-library and
 https://github.com/adafruit/DHT-sensor-library
 
+I have published a 3D-printable case:
+https://www.thingiverse.com/thing:2908971
+![image](https://cdn.thingiverse.com/renders/e4/b7/b4/40/48/969ad4494cfff08b923eb10d758e1cd6_preview_featured.jpg)
+
 Here is an image of the running prototype:
 ![prototype](https://github.com/wilhelmzeuschner/arduino_graphical_temperature_display/blob/master/images/IMG_20180402_212118.jpg)
